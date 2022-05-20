@@ -1,120 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="2048"
-   height="2048"
-   viewBox="0 0 541.86665 541.86668"
-   version="1.1"
-   id="svg5"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="icon.svg"
-   inkscape:export-filename="C:\Users\HP\OneDrive\Documents\Programmation\Quark Page\icon.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:pageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="px"
-     showgrid="true"
-     units="px"
-     inkscape:zoom="0.22876434"
-     inkscape:cx="1025.0724"
-     inkscape:cy="1025.0724"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
-    <inkscape:grid
-       type="axonomgrid"
-       id="grid824"
-       units="px"
-       empspacing="128"
-       spacingy="0.26458333"
-       originx="270.93333"
-       originy="270.93334"
-       enabled="false" />
-    <sodipodi:guide
-       position="0,541.86667"
-       orientation="0,2048"
-       id="guide1355" />
-    <sodipodi:guide
-       position="541.86667,541.86667"
-       orientation="2048,0"
-       id="guide1357" />
-    <sodipodi:guide
-       position="541.86667,0"
-       orientation="0,-2048"
-       id="guide1359" />
-    <sodipodi:guide
-       position="0,0"
-       orientation="-2048,0"
-       id="guide1361" />
-  </sodipodi:namedview>
-  <defs
-     id="defs2">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient2261">
-      <stop
-         style="stop-color:#00e0ff;stop-opacity:1"
-         offset="0"
-         id="stop2257" />
-      <stop
-         style="stop-color:#0080c0;stop-opacity:1"
-         offset="1"
-         id="stop2259" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2048" height="2048" viewBox="0 0 541.86665 541.86668">
+  <defs>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#00e0ff"/>
+      <stop offset="1" stop-color="#0080c0"/>
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2261"
-       id="linearGradient1353"
-       x1="0"
-       y1="-5.0000003e-06"
-       x2="541.8667"
-       y2="541.86664"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2261"
-       id="linearGradient1825"
-       x1="0"
-       y1="-5.0000003e-06"
-       x2="541.8667"
-       y2="541.86664"
-       gradientUnits="userSpaceOnUse" />
+    <linearGradient xlink:href="#a" id="c" x1="0" x2="541.8667" y1="-.000005" y2="541.86664" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#a" id="b" x1="0" x2="541.8667" y1="-.000005" y2="541.86664" gradientUnits="userSpaceOnUse"/>
   </defs>
-  <g
-     inkscape:label="Calque 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <circle
-       style="fill:url(#linearGradient1825);stroke:none;stroke-width:116.629;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
-       id="path847"
-       cx="270.93332"
-       cy="270.93332"
-       r="270.93332" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:102.05;stroke-linecap:round;stroke-linejoin:round"
-       id="path847-0"
-       cx="270.93332"
-       cy="270.93332"
-       r="237.06667" />
-    <path
-       id="path1094"
-       style="fill:none;fill-opacity:1;stroke:url(#linearGradient1353);stroke-width:33.86666656;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 94.956972,169.33333 H 446.90969 l -175.97637,304.8 z m 0,0 351.952718,203.2 v -203.2 l -351.952718,203.2 175.976348,101.6 V 67.733332 Z M 270.93332,67.733332 94.956972,169.33333 v 203.2 l 175.976348,101.6 175.97637,-101.6 v -203.2 z" />
-  </g>
+  <circle cx="270.93332" cy="270.93332" r="270.93332" fill="url(#b)"/>
+  <circle cx="270.93332" cy="270.93332" r="237.06667"/>
+  <path fill="none" stroke="url(#c)" stroke-linecap="round" stroke-linejoin="round" stroke-width="33.86666656" d="M94.956972 169.33333H446.90969l-175.97637 304.8zm0 0 351.952718 203.2v-203.2l-351.952718 203.2 175.976348 101.6V67.733332ZM270.93332 67.733332 94.956972 169.33333v203.2l175.976348 101.6 175.97637-101.6v-203.2z"/>
 </svg>
