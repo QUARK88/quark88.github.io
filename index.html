@@ -26,14 +26,30 @@
         src: url(font2.ttf);
     }
 
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
     html {
         background-color: #000;
-        padding: 0;
-        scroll-behavior: smooth;
-        background-image: url("bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    }
+
+    body {
+        background: linear-gradient(-45deg, #0080c0, #0080c0, #0060a0, #0060a0);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        margin: 0;
+        padding: 32px;
     }
 
     h1 {
@@ -57,7 +73,6 @@
         display: block;
         margin: auto;
         margin-bottom: 32px;
-        margin-top: 32px;
         transition: all .2s ease-in-out;
     }
 
@@ -70,7 +85,7 @@
     <a href="https://www.w3schools.com"><img src="pfp.svg" class="pfp"></a>
     <h1>Quark</h1>
     <h2>Your favorite retard</h2>
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 
 </html>
