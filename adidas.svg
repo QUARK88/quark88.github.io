@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2048"
+   height="2048"
+   viewBox="0 0 541.86665 541.86665"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Adidas.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="0.20526726"
+     inkscape:cx="996.26214"
+     inkscape:cy="1025.4923"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="0,541.86665"
+       orientation="0,2048"
+       id="guide824" />
+    <sodipodi:guide
+       position="541.86665,541.86665"
+       orientation="2048,0"
+       id="guide826" />
+    <sodipodi:guide
+       position="541.86665,0"
+       orientation="0,-2048"
+       id="guide828" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-2048,0"
+       id="guide830" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.266752;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect854"
+       width="541.86664"
+       height="541.86664"
+       x="2.8483073e-05"
+       y="0" />
+    <path
+       id="rect952"
+       style="color:#000000;fill:#ffffff;fill-rule:evenodd;stroke-width:0.499997;-inkscape-stroke:none"
+       d="M 768,0 0,2048 H 256 L 1024,0 Z M 1280,0 512,2048 H 768 L 1536,0 Z m 512,0 -768,2048 h 256 L 2048,0 Z"
+       transform="scale(0.26458333)" />
+  </g>
+</svg>
