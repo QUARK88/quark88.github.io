@@ -45,9 +45,9 @@
     }
 
     body {
-        background: linear-gradient(-45deg, #0080c0, #0080c0, #0060a0, #0060a0);
+        background: linear-gradient(-45deg, #0080e0, #0080e0, #0060c0, #0060c0);
         background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
+        animation: gradient 10s ease-in-out infinite;
         margin: 0;
         padding: 32px;
     }
@@ -59,7 +59,7 @@
         margin-bottom: 0px;
         margin-top: 0px;
         text-align: center;
-        text-shadow: 4px 4px #00b5ff;
+        text-shadow: 4px 4px #00b5ff, 3px 3px #00b5ff, 2px 2px #00b5ff, 1px 1px #00b5ff;
     }
 
     h2 {
@@ -70,22 +70,46 @@
     }
 
     .pfp {
-        display: block;
-        margin: auto;
         margin-bottom: 32px;
         transition: all .2s ease-in-out;
     }
 
     img.pfp:hover {
         transform: scale(1.05);
+        box-shadow: 0 0 0 0 #00000040, 0 8px 16px 0 #00000040;
+    }
+
+    .button {
+        background-color: #00a0e0;
+        font-family: font1 !important;
+        border: 0;
+        border-radius: 32px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 48px;
+        margin: 1%;
+        padding: 16px;
+        text-align: center;
+        width: 48%;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        transition: all .2s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.025);
+        box-shadow: 0 0 0 0 #00000040, 0 8px 16px 0 #00000040;
     }
 </style>
 
 <body>
-    <a href="https://www.w3schools.com"><img src="pfp.svg" class="pfp"></a>
+    <center><a href="https://polcompballminarchy.miraheze.org/wiki/User:Quark" target="_blank"><img src="pfp.svg"
+                style="border-radius:100%;" class="pfp"></a></center>
     <h1>Quark</h1>
     <h2>Your favorite retard</h2>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button class="button" onclick="window.open('https://www.reddit.com/user/QK_QUARK88')">Reddit</button><button
+        class="button" onclick="window.open('https://twitter.com/RenaudBeaulieuQ')">Twitter</button>
 </body>
 
 </html>
