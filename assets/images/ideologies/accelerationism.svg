@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="accelerationism.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="5.776859"
+     inkscape:cx="24.580832"
+     inkscape:cy="32.024323"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1003"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path341"
+       style="fill:#000000;stroke-width:8.46701;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1"
+       d="M 8.4666665 0 A 8.4666662 8.4666662 0 0 0 0 8.4666665 A 8.4666662 8.4666662 0 0 0 8.4666665 16.933333 A 8.4666662 8.4666662 0 0 0 16.933333 8.4666665 A 8.4666662 8.4666662 0 0 0 8.4666665 0 z " />
+    <path
+       id="path1212"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.46701;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="M 2.6458333,5.2916666 4.7624999,8.4666665 2.6458333,11.641666 H 4.7624999 L 6.8791665,8.4666665 4.7624999,5.2916666 Z m 4.2333332,0 2.1166666,3.1749999 -2.1166666,3.1749995 H 8.9958331 L 11.1125,8.4666665 8.9958331,5.2916666 Z m 4.2333335,0 2.116667,3.1749999 -2.116667,3.1749995 h 2.116667 L 15.345834,8.4666665 13.229167,5.2916666 Z" />
+  </g>
+</svg>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Quark</title>
+    <link rel=icon type=x-icon href="pfp.gif" />
+    <link rel="shortcut icon" type=x-icon href="./assets/images/common/pfp.gif" />
+    <meta property="og:title" content="Quark" />
+    <meta property="og:description" content="Something something i am myself." />
+    <meta property="og:url" content="https://quark88.github.io/" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/QUARK88/quark88.github.io/main/assets/images/common/pfp.gif?raw=true" />
+    <meta property="og:type" content="Personal Card" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="body"
+    style="background-size:cover;background-attachment:fixed;background-position:center;background-repeat:no-repeat;">
+    <div class="container" id="main">
+        <div class="hexagon">
+            <div class="hexagonimage"></div>
+            <img src="./assets/images/common/pfp.gif" class="pfp"></img>
+            <div class="h1" data-text="Quark">Quark</div>
+            <button class="button" onclick="gotoinfo()">
+                <div class="buttonlabel">Info</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotosocials()">
+                <div class="buttonlabel">Socials</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotopolitics()">
+                <div class="buttonlabel">Politics</div>
+                <div class="buttonicon"></div>
+            </button>
+        </div>
+    </div>
+    <div class="container" id="info">
+        <div class="hexagon" style="width:60%;">
+            <div class="hexagonimage"></div>
+            <div class="h1" data-text="Info">Info</div>
+            <h2>👋🏻 Hi ! I'm Quark 👋🏻<br>🙂 Here's some info about me 🙂</h2><br><br>
+            <div class="list">
+                • IRL Name: 👨‍💻 Renaud Beaulieu<br>
+                • Birthday: ♐ December 4th, 2003 (19 years old)<br>
+                • Origin: ⚜️ Québec<br>
+                • Pronouns: ♂️ He/Him<br>
+                • Gender: ❌ Agender<br>
+                • Attraction: 💚 Demiromantic + 💜 Greyasexual (Details <a href="https://en.pronouns.page/@Quark"
+                    target="_blank">here 😉</a>)<br>
+            </div>
+            <h2>❤️ My interests ❤️</h2>
+            <div id="app-cover">
+                <div id="bg-artwork"></div>
+                <div id="bg-layer"></div>
+                <div id="player">
+                    <div id="player-track">
+                        <div id="album-name"></div>
+                        <div id="track-name"></div>
+                        <div id="track-time">
+                            <div id="current-time"></div>
+                            <div id="track-length"></div>
+                        </div>
+                        <div id="s-area">
+                            <div id="ins-time"></div>
+                            <div id="s-hover"></div>
+                            <div id="seek-bar"></div>
+                        </div>
+                    </div>
+                    <div id="player-content">
+                        <div id="album-art">
+                            <img src="./assets/images/albums/rancidphonk.jpg" class="active" id="_1">
+                            <img src="./assets/images/albums/hardbassgaming.jpg" id="_2">
+                            <img src="./assets/images/albums/technokopter.jpg" id="_3">
+                            <img src="./assets/images/albums/dragunov.jpg" id="_4">
+                            <img src="./assets/images/albums/fulgurator.jpg" id="_5">
+                            <div id="buffer-box">Loading...</div>
+                        </div>
+                        <div id="player-controls">
+                            <div class="control">
+                                <div class="button2" id="play-previous">
+                                    <i class="fas fa-backward"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button2" id="play-pause-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button2" id="play-next">
+                                    <i class="fas fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+            <script src="./script.js"></script>
+            <button class="button" onclick="gotomain()">
+                <div class="buttonlabel">main</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotosocials()">
+                <div class="buttonlabel">Socials</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotopolitics()">
+                <div class="buttonlabel">Politics</div>
+                <div class="buttonicon"></div>
+            </button>
+        </div>
+    </div>
+    <div class="container" id="socials">
+        <div class="hexagon">
+            <div class="hexagonimage"></div>
+            <div class="h1" data-text="Socials">Socials</div>
+            <div class="svgholder">
+                <div class="tooltip">
+                    <span class="tooltiptext" id="discord">Quark#1916</span>
+                    <img src="./assets/images/socials/discord.svg" onclick="navigator.clipboard.writeText('Quark#1916');document.getElementById('discord').innerHTML = 'Tag copied!';setTimeout(() => {  document.getElementById('discord').innerHTML = 'Quark#1916' }, 2000);"
+                        class="socialsicon"></img>
+                </div>
+                <div class="tooltip">
+                    <span class="tooltiptext">u/QK_QUARK88</span>
+                    <img src="./assets/images/socials/reddit.svg"
+                        onclick="window.location.href='https://www.reddit.com/user/QK_QUARK88'"
+                        class="socialsicon"></img>
+                </div>
+                <div class="tooltip">
+                    <span class="tooltiptext">@RenaudBeaulieuQ</span>
+                    <img src="./assets/images/socials/twitter.svg"
+                        onclick="window.location.href='https://twitter.com/RenaudBeaulieuQ'" class="socialsicon"></img>
+                </div>
+            </div>
+            <button class="button" onclick="gotomain()">
+                <div class="buttonlabel">main</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotoinfo()">
+                <div class="buttonlabel">Info</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotopolitics()">
+                <div class="buttonlabel">Politics</div>
+                <div class="buttonicon"></div>
+            </button>
+        </div>
+    </div>
+    <div class="container" id="politics">
+        <div class="hexagon" style="width:60%;">
+            <div class="hexagonimage"></div>
+            <div class="h1" data-text="Politics">Politics</div>
+            <div class="card">
+                <span style="display:table-cell;vertical-align:middle;"><img
+                        src="./assets/images/ideologies/georgism.svg" class="icon"
+                        onclick="window.location.href='https://en.wikipedia.org/wiki/Georgism'"></img></span>
+                <span class="desc">I support the elimination of all conventional taxation in favour of a levy on
+                    unimproved land value and a sales tax proportionate to external production costs</span>
+            </div>
+            <div class="card">
+                <span style="display:table-cell;vertical-align:middle;"><img
+                        src="./assets/images/ideologies/accelerationism.svg" class="icon"
+                        onclick="window.location.href='https://en.wikipedia.org/wiki/Accelerationism'"></img></span>
+                <span class="desc">Something</span>
+            </div>
+            <div class="card">
+                <span style="display:table-cell;vertical-align:middle;"><img
+                        src="./assets/images/ideologies/atheism.svg" class="icon"
+                        onclick="window.location.href='https://en.wikipedia.org/wiki/New_Atheism'"></img></span>
+                <span class="desc">Something</span>
+            </div>
+            <button class="button" onclick="gotomain()">
+                <div class="buttonlabel">main</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotoinfo()">
+                <div class="buttonlabel">Info</div>
+                <div class="buttonicon"></div>
+            </button>
+            <button class="button" onclick="gotosocials()">
+                <div class="buttonlabel">Socials</div>
+                <div class="buttonicon"></div>
+            </button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const main = document.getElementById("main");
+    const info = document.getElementById("info");
+    const socials = document.getElementById("socials");
+    const politics = document.getElementById("politics");
+    const body = document.getElementById("body");
+
+    function gotomain() {
+        body.style.backgroundImage = "url(./assets/images/backgrounds/main.jpg)";
+        main.style.display = "flex";
+        info.style.display = "none";
+        socials.style.display = "none";
+        politics.style.display = "none";
+    };
+
+    function gotoinfo() {
+        body.style.backgroundImage = "url(./assets/images/backgrounds/info.jpg)";
+        main.style.display = "none";
+        info.style.display = "flex";
+        socials.style.display = "none";
+        politics.style.display = "none";
+    };
+
+    function gotosocials() {
+        body.style.backgroundImage = "url(./assets/images/backgrounds/socials.jpg)";
+        main.style.display = "none";
+        info.style.display = "none";
+        socials.style.display = "flex";
+        politics.style.display = "none";
+    };
+
+    function gotopolitics() {
+        body.style.backgroundImage = "url(./assets/images/backgrounds/politics.jpg)";
+        main.style.display = "none";
+        info.style.display = "none";
+        socials.style.display = "none";
+        politics.style.display = "flex";
+    };
+
+    gotomain();
+
+</script>
+
+</html>

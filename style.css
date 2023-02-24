@@ -1,0 +1,1025 @@
+/*Fonts*/
+
+@font-face {
+    font-family: "title";
+    src: url(./assets/fonts/title.ttf);
+}
+
+@font-face {
+    font-family: "button";
+    src: url(./assets/fonts/button.ttf);
+}
+
+@font-face {
+    font-family: "text";
+    src: url(./assets/fonts/text.ttf);
+}
+
+/*Theme*/
+
+:root {
+    --hex: #101010c0;
+    --button1: #fff000ff;
+    --button2: #20f0ffff;
+    --glitchtext: #ffffffff;
+    --glitch1: #ff00c0ff;
+    --glitch2: #20f0ffff;
+}
+
+/*Mobile*/
+
+@media (max-width: 1024px) {
+
+    #app-cover {
+        margin-bottom: 192px !important;
+    }
+
+    #album-name {
+        font-size: 28px !important;
+    }
+
+    #track-name {
+        font-size: 20px !important;
+    }
+
+    #player-track.active {
+        height: 112px !important;
+        top: -148px !important;
+    }
+
+    #current-time,
+    #track-length {
+        font-size: 20px !important;
+        bottom: 6px !important;
+        position: relative !important;
+    }
+
+    #s-area,
+    #seek-bar {
+        top: 16px;
+        height: 8px !important;
+    }
+
+    .hexagon {
+        width: 75% !important;
+        padding: 64px !important;
+    }
+
+    .button {
+        max-width: 768px !important;
+        height: 96px !important;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%) !important;
+        padding: 0 32px !important;
+    }
+
+    .buttonlabel {
+        font-size: 48px !important;
+    }
+
+    .pfp {
+        width: 256px !important;
+        height: 256px !important;
+    }
+
+    h1 {
+        font-size: 64px !important;
+    }
+
+    .buttonicon {
+        right: 48px !important;
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    .buttonicon:before {
+        height: 5px !important;
+        top: 32px !important;
+    }
+
+    .buttonicon:after {
+        border-top: 5px solid black !important;
+        border-right: 5px solid black !important;
+        width: 16px !important;
+        height: 16px !important;
+        top: 24px !important;
+    }
+
+    .socialsicon {
+        height: 160px !important;
+        width: 160px !important;
+    }
+}
+
+/*Common*/
+
+* {
+    outline: none;
+    font-family: text;
+    text-decoration: none;
+}
+
+html,
+body {
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    color: var(--button1);
+}
+
+.container {
+    padding: 64px;
+    align-items: center;
+    justify-content: center;
+    min-height: 75%;
+}
+
+.pfp {
+    border-radius: 100%;
+    width: 128px;
+    height: 128px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    padding-left: 32px;
+    color: var(--glitchtext);
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.list {
+    text-align: left !important;
+    padding-left: 92px !important;
+    color: #ffffffff !important;
+    font-size: 24px !important;
+    letter-spacing: 1px !important;
+}
+
+/*Buttons*/
+
+.button {
+    background: var(--button1);
+    border: 0;
+    padding: 0;
+    margin: 0 auto;
+    height: 48px;
+    width: 100%;
+    max-width: 384px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--button2);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover:before,
+.button:focus:before {
+    transform-origin: left center;
+    transform: scaleX(1);
+}
+
+.button:hover .buttonicon,
+.button:focus .buttonicon {
+    transform: translate3d(8px, -50%, 0);
+}
+
+.buttonlabel {
+    position: relative;
+    font-family: button !important;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.buttonicon {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonicon:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.buttonicon:after {
+    content: '';
+    transform: rotate(45deg);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+
+/*Ideologies*/
+
+.card {
+    display: table;
+    min-height: 128px;
+}
+
+.icon {
+    display: table-cell;
+    border-radius: 100%;
+    height: 96px;
+    width: 96px;
+    vertical-align: middle;
+    border: solid 4px #00000000;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.icon:hover {
+    border: solid 4px var(--button1);
+    transition: 0.1s ease-in-out;
+}
+
+.desc {
+    padding-left: 32px;
+    display: table-cell;
+    position: relative;
+    color: var(--glitchtext);
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+/*Socials*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.tooltip .tooltiptext {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 16px) 80%, 55% 80%, 50% 100%, 45% 80%, 0 80%);
+    opacity: 0;
+    background-color: var(--button1);
+    color: #000000ff;
+    text-align: center;
+    padding: 8px;
+    position: absolute;
+    width: 160px;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -86px;
+    font-size: 18px;
+    transition: 0.1s ease-in-out;
+    padding-bottom: 20px;
+}
+
+.tooltip:hover .tooltiptext {
+    transition: 0.1s ease-in-out;
+    opacity: 1;
+}
+
+.svgholder {
+    width: 100%;
+    text-align: center;
+}
+
+.socialsicon {
+    height: 64px;
+    width: 64px;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 100%;
+    border: solid 2px #00000000;
+    transition: 0.1s ease-in-out;
+}
+
+.socialsicon:hover {
+    scale: 1.1;
+    border: solid 2px var(--button1);
+}
+
+/*Hexagons*/
+
+.hexagon {
+    display: grid;
+    grid-gap: 24px;
+    align-items: center;
+    width: 384px;
+    padding: 32px;
+    overflow: hidden;
+    clip-path: polygon(0 24px, 24px 0, 24px 0, 24px 0, 0 24px, 0 24px);
+    animation: hexagon-open 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
+    backdrop-filter: blur(4px);
+}
+
+.hexagon.fade {
+    opacity: 0;
+}
+
+.hexagon>* {
+    position: relative;
+    opacity: 0;
+    animation: fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hexagon>*:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.hexagon>*:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.hexagon>*:nth-child(4) {
+    animation-delay: 1.6s;
+}
+
+.hexagon>*:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+.hexagon>*:nth-child(6) {
+    animation-delay: 2s;
+}
+
+.hexagon>*:nth-child(7) {
+    animation-delay: 2.2s;
+}
+
+.hexagon>*:nth-child(8) {
+    animation-delay: 2.4s;
+}
+
+.hexagon>*:nth-child(9) {
+    animation-delay: 2.6s;
+}
+
+.hexagon>*:nth-child(10) {
+    animation-delay: 2.8s;
+}
+
+.hexagon>*:nth-child(11) {
+    animation-delay: 3s;
+}
+
+.hexagon>*:nth-child(12) {
+    animation-delay: 3.2s;
+}
+
+.hexagon>*:nth-child(13) {
+    animation-delay: 3.4s;
+}
+
+.hexagon>*:nth-child(14) {
+    animation-delay: 3.6s;
+}
+
+.hexagon>*:nth-child(15) {
+    animation-delay: 3.8s;
+}
+
+.hexagon>*:nth-child(16) {
+    animation-delay: 4s;
+}
+
+.hexagonimage {
+    position: absolute;
+    animation: none;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--hex);
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes hexagon-open {
+    0% {
+        clip-path: polygon(0 24px, 24px 0, 24px 0, 24px 0, 0 24px, 0 24px);
+    }
+
+    50% {
+        clip-path: polygon(0 24px, 24px 0, 24px 0, 24px calc(100% - 24px), 0 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 24px, 24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translate3d(-16px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/*Title*/
+
+.h1 {
+    opacity: 1;
+    margin: auto;
+    font-size: 48px;
+    font-family: title !important;
+    position: relative;
+    color: var(--glitchtext);
+    letter-spacing: 0.25em;
+    animation: h1-skew 1s infinite linear alternate-reverse;
+}
+
+.h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 2px;
+    text-shadow: -2px 0 var(--glitch1);
+    animation: h1-anim 5s infinite linear alternate-reverse;
+}
+
+.h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: -2px;
+    text-shadow: -2px 0 var(--glitch1), 2px 2px var(--glitch2);
+    animation: h1-anim2 1s infinite linear alternate-reverse;
+}
+
+/*Track Player*/
+
+#play-pause-button {
+    clip-path: polygon(25% 20%, 75% 50%, 25% 80%);
+}
+
+#play-next {
+    clip-path: polygon(25% 30%, 50% 50%, 50% 30%, 75% 50%, 50% 70%, 50% 50%, 25% 70%);
+}
+
+#play-previous {
+    clip-path: polygon(75% 30%, 50% 50%, 50% 30%, 25% 50%, 50% 70%, 50% 50%, 75% 70%);
+}
+
+#app-cover {
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 512px;
+    height: 100px;
+    margin: -4px auto;
+    margin-bottom: 96px;
+}
+
+#player {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+
+#player-track {
+    opacity: 0%;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    left: 16px;
+    padding: 16px 16px 16px 184px;
+    background-color: #00000080;
+    border: solid 4px var(--button1);
+    transition: 0.25s ease-in-out;
+    z-index: 1;
+    border-radius: 16px 16px 0px 0px;
+}
+
+#player-track.active {
+    opacity: 100%;
+    top: -112px;
+}
+
+#album-name {
+    color: var(--button1);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: button;
+}
+
+#track-name {
+    color: #c0c0c0ff;
+    font-size: 14px;
+    margin: 2px 0 12px 0;
+}
+
+#track-time {
+    color: var(--button1);
+    height: 12px;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+#current-time {
+    float: left;
+}
+
+#track-length {
+    float: right;
+}
+
+#current-time,
+#track-length {
+    font-size: 12px;
+    transition: 0.25s ease-in-out;
+}
+
+#track-time.active #current-time,
+#track-time.active #track-length {
+    color: var(--button1);
+}
+
+#s-area,
+#seek-bar {
+    position: relative;
+    height: 4px;
+    border-radius: 12px;
+}
+
+#s-area {
+    background-color: var(--glitchtext);
+    cursor: pointer;
+}
+
+#ins-time {
+    position: absolute;
+    top: -32px;
+    color: #000000ff;
+    font-size: 12px;
+    white-space: pre;
+    padding: 4px 8px;
+    padding-right: 14px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    display: none;
+}
+
+#s-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+#ins-time,
+#s-hover {
+    background-color: var(--button1);
+}
+
+#seek-bar {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: var(--button1);
+    transition: 0.2s ease width;
+    z-index: 1;
+}
+
+#player-content {
+    position: relative;
+    height: 100%;
+    background-color: #00000080;
+    border: solid 4px var(--button1);
+    z-index: 2;
+}
+
+#album-art {
+    position: absolute;
+    top: -48px;
+    width: 128px;
+    height: 128px;
+    margin-left: 32px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+    border: solid 4px var(--button1);
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+#album-art.active {
+    top: -72px;
+    border: solid 4px var(--button2);
+}
+
+#album-art:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: -10px auto 0 auto;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#album-art img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+
+#album-art img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+#album-art.active img.active {
+    z-index: 1;
+    -webkit-animation: rotateAlbumArt 3s linear 0s infinite forwards;
+    animation: rotateAlbumArt 3s linear 0s infinite forwards;
+}
+
+@-webkit-keyframes rotateAlbumArt {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes rotateAlbumArt {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+#buffer-box {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 16px;
+    color: #000000ff;
+    font-size: 16px;
+    line-height: 1;
+    padding: 8px;
+    margin: -12px auto 0 auto;
+    background-color: var(--button1);
+    opacity: 0;
+    z-index: 2;
+}
+
+#album-art img,
+#buffer-box {
+    transition: 0.1s linear all;
+}
+
+#album-art.buffering img {
+    opacity: 50%;
+}
+
+#album-art.buffering #buffer-box {
+    opacity: 1;
+}
+
+#player-controls {
+    width: 256px;
+    height: 100%;
+    float: right;
+    margin-right: 16px;
+    overflow: hidden;
+}
+
+.control {
+    width: 25%;
+    float: left;
+    padding: 12px 0;
+    margin: 4px;
+}
+
+.button2 {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    background-color: var(--button1);
+    transition: 0.25s ease-in-out;
+}
+
+.button2:hover {
+    background-color: var(--button2);
+    transition: 0.1s ease-in-out;
+    scale: 1.1;
+}
+
+/*Title Animation*/
+
+@keyframes h1-anim {
+    0% {
+        clip: rect(20px, 9999px, 36px, 0);
+        transform: skew(0.52deg);
+    }
+
+    5% {
+        clip: rect(15px, 9999px, 67px, 0);
+        transform: skew(0.13deg);
+    }
+
+    10% {
+        clip: rect(51px, 9999px, 22px, 0);
+        transform: skew(0.77deg);
+    }
+
+    15% {
+        clip: rect(4px, 9999px, 40px, 0);
+        transform: skew(0.98deg);
+    }
+
+    20% {
+        clip: rect(49px, 9999px, 59px, 0);
+        transform: skew(0.49deg);
+    }
+
+    25% {
+        clip: rect(41px, 9999px, 61px, 0);
+        transform: skew(0.78deg);
+    }
+
+    30% {
+        clip: rect(20px, 9999px, 46px, 0);
+        transform: skew(0.12deg);
+    }
+
+    35% {
+        clip: rect(92px, 9999px, 55px, 0);
+        transform: skew(0.59deg);
+    }
+
+    40% {
+        clip: rect(70px, 9999px, 32px, 0);
+        transform: skew(0.5deg);
+    }
+
+    45% {
+        clip: rect(84px, 9999px, 98px, 0);
+        transform: skew(0.37deg);
+    }
+
+    50% {
+        clip: rect(39px, 9999px, 20px, 0);
+        transform: skew(0.75deg);
+    }
+
+    55% {
+        clip: rect(99px, 9999px, 80px, 0);
+        transform: skew(0.21deg);
+    }
+
+    60% {
+        clip: rect(27px, 9999px, 93px, 0);
+        transform: skew(0.65deg);
+    }
+
+    65% {
+        clip: rect(23px, 9999px, 63px, 0);
+        transform: skew(0.51deg);
+    }
+
+    70% {
+        clip: rect(95px, 9999px, 74px, 0);
+        transform: skew(0.29deg);
+    }
+
+    75% {
+        clip: rect(12px, 9999px, 85px, 0);
+        transform: skew(0.54deg);
+    }
+
+    80% {
+        clip: rect(57px, 9999px, 62px, 0);
+        transform: skew(0.54deg);
+    }
+
+    85% {
+        clip: rect(8px, 9999px, 93px, 0);
+        transform: skew(0.09deg);
+    }
+
+    90% {
+        clip: rect(86px, 9999px, 67px, 0);
+        transform: skew(0.87deg);
+    }
+
+    95% {
+        clip: rect(39px, 9999px, 27px, 0);
+        transform: skew(0.78deg);
+    }
+
+    100% {
+        clip: rect(99px, 9999px, 94px, 0);
+        transform: skew(0.72deg);
+    }
+}
+
+@keyframes h1-anim2 {
+    0% {
+        clip: rect(4px, 9999px, 41px, 0);
+        transform: skew(0.39deg);
+    }
+
+    5% {
+        clip: rect(47px, 9999px, 55px, 0);
+        transform: skew(0.59deg);
+    }
+
+    10% {
+        clip: rect(53px, 9999px, 36px, 0);
+        transform: skew(0.72deg);
+    }
+
+    15% {
+        clip: rect(81px, 9999px, 45px, 0);
+        transform: skew(0.52deg);
+    }
+
+    20% {
+        clip: rect(63px, 9999px, 79px, 0);
+        transform: skew(0.25deg);
+    }
+
+    25% {
+        clip: rect(76px, 9999px, 49px, 0);
+        transform: skew(0.8deg);
+    }
+
+    30% {
+        clip: rect(8px, 9999px, 30px, 0);
+        transform: skew(0.19deg);
+    }
+
+    35% {
+        clip: rect(64px, 9999px, 13px, 0);
+        transform: skew(0.24deg);
+    }
+
+    40% {
+        clip: rect(71px, 9999px, 82px, 0);
+        transform: skew(0.12deg);
+    }
+
+    45% {
+        clip: rect(20px, 9999px, 31px, 0);
+        transform: skew(0.66deg);
+    }
+
+    50% {
+        clip: rect(20px, 9999px, 85px, 0);
+        transform: skew(0.31deg);
+    }
+
+    55% {
+        clip: rect(3px, 9999px, 52px, 0);
+        transform: skew(0.27deg);
+    }
+
+    60% {
+        clip: rect(48px, 9999px, 85px, 0);
+        transform: skew(0.65deg);
+    }
+
+    65% {
+        clip: rect(48px, 9999px, 81px, 0);
+        transform: skew(0.52deg);
+    }
+
+    70% {
+        clip: rect(71px, 9999px, 71px, 0);
+        transform: skew(0.81deg);
+    }
+
+    75% {
+        clip: rect(19px, 9999px, 86px, 0);
+        transform: skew(0.85deg);
+    }
+
+    80% {
+        clip: rect(76px, 9999px, 80px, 0);
+        transform: skew(0.61deg);
+    }
+
+    85% {
+        clip: rect(20px, 9999px, 87px, 0);
+        transform: skew(0.67deg);
+    }
+
+    90% {
+        clip: rect(89px, 9999px, 43px, 0);
+        transform: skew(0.58deg);
+    }
+
+    95% {
+        clip: rect(1px, 9999px, 54px, 0);
+        transform: skew(0.91deg);
+    }
+
+    100% {
+        clip: rect(46px, 9999px, 34px, 0);
+        transform: skew(1deg);
+    }
+}
+
+@keyframes h1-skew {
+    0% {
+        transform: skew(0deg);
+    }
+
+    10% {
+        transform: skew(4deg);
+    }
+
+    20% {
+        transform: skew(-2deg);
+    }
+
+    30% {
+        transform: skew(2deg);
+    }
+
+    40% {
+        transform: skew(3deg);
+    }
+
+    50% {
+        transform: skew(-2deg);
+    }
+
+    60% {
+        transform: skew(-2deg);
+    }
+
+    70% {
+        transform: skew(2deg);
+    }
+
+    80% {
+        transform: skew(-1deg);
+    }
+
+    90% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(-2deg);
+    }
+}
