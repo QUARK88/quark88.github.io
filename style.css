@@ -1,0 +1,207 @@
+@font-face {
+    font-family: heavitas;
+    src: url("./assets/fonts/heavitas.ttf");
+}
+
+@font-face {
+    font-family: rajdhani;
+    src: url("./assets/fonts/rajdhani.ttf");
+}
+
+@font-face {
+    font-family: nexa;
+    src: url("./assets/fonts/nexa.ttf");
+}
+
+* {
+    margin: 0;
+    /*outline-offset: -1px;
+    outline: 1px solid #00ff00ff;*/
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+html {
+    background-color: #000000ff;
+    background-image: url("./assets/img/2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: #20202080;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+#screen {
+    display: flex;
+    margin: auto;
+    padding: 6vh;
+    width: 25%;
+    background-color: #000000a0;
+    clip-path: polygon(6vh 0%, 100% 0%, 100% calc(100% - 6vh), calc(100% - 6vh) 100%, 0% 100%, 0% 6vh);
+    transition: .3s linear;
+    backdrop-filter: blur(.25vh)
+}
+
+#menu {
+    width: 100%;
+}
+
+#info {
+    display: none;
+    width: 72%;
+    padding: 4vh;
+}
+
+.slide {
+    display: none;
+    font-family: nexa;
+    color: #ffffffff;
+    height: 100%;
+    font-size: 4vh;
+}
+
+.pfp {
+    display: block;
+    margin: auto;
+    width: 20vh;
+    border-radius: 100%;
+    animation: spin 4s linear infinite;
+    animation-delay: 3s;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: .75vh;
+    background-color: white;
+}
+
+.left {
+    left: 17%;
+    animation: slideLeft 2s cubic-bezier(.2, .6, .5, 1) forwards 2s;
+}
+
+.right {
+    right: 17%;
+    animation: slideRight 2s cubic-bezier(.2, .6, .5, 1) forwards 2s;
+}
+
+.name {
+    display: block;
+    margin: 4vh auto;
+    width: 30vh;
+    z-index: 1;
+}
+
+@keyframes slideLeft {
+    to {
+        width: 17%;
+        left: 0;
+    }
+}
+
+@keyframes slideRight {
+    to {
+        width: 17%;
+        right: 0;
+    }
+}
+
+.button {
+    margin: 2vh auto 0 auto;
+    background-color: #fff000ff;
+    text-transform: uppercase;
+    color: #000000ff;
+    font-family: rajdhani;
+    font-size: 4vh;
+    padding: 1.5vh 2.5vh;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 3vh), calc(100% - 3vh) 100%, 0% 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #00f0ffff;
+    transition: left 0.2s ease-in;
+    z-index: 0;
+}
+
+.button:hover::before {
+    left: 0;
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.button-image {
+    height: 3vh;
+    position: absolute;
+    right: 5vh;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.4s;
+    z-index: 1;
+}
+
+.button:hover .button-image {
+    right: 3.5vh;
+}
+
+#socials {
+    margin: 4vh auto 0 auto;
+    padding: 0%;
+    font-size: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 34vh;
+}
+
+.social {
+    border-radius: 100%;
+    display: flex;
+    width: 10vh;
+    cursor: pointer;
+}
+
+.social:hover {
+    transition: .1s;
+    outline: .5vh solid #fff000ff;
+    outline-offset: -.25vh;
+}
