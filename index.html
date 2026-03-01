@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quark</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section id="home">
+        <div class="content">
+            <div class="pfp"></div>
+            <div class="name">Quark</div>
+            <div class="homeButtons">
+                <button class="homeButton" onclick="show(about)">
+                    <div class="homeButton__text">About</div>
+                    <div class="homeButton__arrow"></div>
+                </button>
+                <button class="homeButton" onclick="show(interests)">Interests</button>
+                <button class="homeButton" onclick="show(projects)">Projects</button>
+            </div>
+            <div class="socials"></div>
+        </div>
+    </section>
+</body>
+
+<script>
+    home = document.getElementById("home")
+    about = document.getElementById("about")
+    interests = document.getElementById("interests")
+    projects = document.getElementById("projects")
+    sections = [home, about, interests, projects]
+    function show(section = home) { for (x of sections) { if (x) x.style.display = x == section ? "flex" : "none" } }
+    show()
+</script>
+
+</html>
