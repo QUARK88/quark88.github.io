@@ -2,26 +2,135 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quark</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/other/icon.png">
+    <title>Quark's Page</title>
+    <meta property="og:site_name" content="quark88.github.io">
+    <meta property="og:title" content="Quark's Page">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://quark88.github.io">
+    <meta property="og:image" content="https://quark88.github.io/assets/images/other/embed.png">
+    <meta name="theme-color" content="#00a0ff" data-react-helmet="true">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <section id="home">
         <div class="content">
             <div class="pfp"></div>
-            <div class="name">Quark</div>
-            <div class="homeButtons">
-                <button class="homeButton" onclick="show(about)">
-                    <div class="homeButton__text">About</div>
-                    <div class="homeButton__arrow"></div>
-                </button>
-                <button class="homeButton" onclick="show(interests)">Interests</button>
-                <button class="homeButton" onclick="show(projects)">Projects</button>
+            <div class="nameContainer">
+                <div class="line"></div>
+                <div class="name">Quark</div>
+                <div class="line"></div>
             </div>
-            <div class="socials"></div>
+            <div class="homeButtons">
+                <button onclick="show(about)">
+                    <div class="button__text">About</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(interests)">
+                    <div class="button__text">Interests</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(projects)">
+                    <div class="button__text">Projects</div>
+                    <div class="button__arrow"></div>
+                </button>
+            </div>
+            <div class="socials">
+                <img title="Quark on Discord" src="./assets/images/socials/discord.svg" class="socialIcon" onclick="navigator.clipboard.writeText('realquark');confirm('Discord tag copied! (realquark)')">
+                <a target="_blank" href="https://x.com/RenaudBeaulieuQ"><img title="Quark on X" src="./assets/images/socials/x.svg" class="socialIcon"></a>
+                <a target="_blank" href="https://www.reddit.com/user/QK_QUARK88"><img title="Quark on Reddit" src="./assets/images/socials/reddit.svg" class="socialIcon"></a>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="content">
+            <div class="buttons">
+                <button onclick="show(home)">
+                    <div class="button__text">Home</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(interests)">
+                    <div class="button__text">Interests</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(projects)">
+                    <div class="button__text">Projects</div>
+                    <div class="button__arrow"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="interests">
+        <div class="content">
+            <div class="buttons">
+                <button onclick="show(home)">
+                    <div class="button__text">Home</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(about)">
+                    <div class="button__text">About</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(projects)">
+                    <div class="button__text">Projects</div>
+                    <div class="button__arrow"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="content">
+            <div class="section__name">Projects</div>
+            <div class="projectsContainer">
+                <a class="project" id="project1" href="https://quark88.github.io/dozenvalues" target="_blank">
+                    <div class="project__image"></div>
+                    <div class="project__name">DozenValues</div>
+                    <div class="project_description">DozenValues is a political test that aims to map differing political perspectives onto six axes.</div>
+                </a>
+                <a class="project" id="project2" href="https://quark88.github.io/ideosorter" target="_blank">
+                    <div class="project__image"></div>
+                    <div class="project__name">IdeoSorter</div>
+                    <div class="project_description">Discover your political ideology with only a few questions using a flowchart quiz.</div>
+                </a>
+                <a class="project" id="project3" href="https://quark88.github.io/rfgen" target="_blank">
+                    <div class="project__image"></div>
+                    <div class="project__name">RFGen</div>
+                    <div class="project_description">Red Flood custom diplomatic screen generator.</div>
+                </a>
+                <a class="project" id="project4" href="https://quark88.github.io/canchart" target="_blank">
+                    <div class="project__image"></div>
+                    <div class="project__name">CanChart</div>
+                    <div class="project_description">Interactive flowchart of canadian political history.</div>
+                </a>
+                <a class="project" id="project5" href="https://quark88.github.io/uschart" target="_blank">
+                    <div class="project__image"></div>
+                    <div class="project__name">USChart</div>
+                    <div class="project_description">Interactive flowchart of american political history.</div>
+                </a>
+                <a class="project" id="project6" href="https://quark88.github.io/frchart" target="_blank">
+                    <div class="project__image"></div>
+                    <div class="project__name">FRChart</div>
+                    <div class="project_description">Interactive flowchart of french political history.</div>
+                </a>
+            </div>
+            <div class="buttons">
+                <button onclick="show(home)">
+                    <div class="button__text">Home</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(about)">
+                    <div class="button__text">About</div>
+                    <div class="button__arrow"></div>
+                </button>
+                <button onclick="show(interests)">
+                    <div class="button__text">Interests</div>
+                    <div class="button__arrow"></div>
+                </button>
+            </div>
         </div>
     </section>
 </body>

@@ -23,19 +23,18 @@
     color: var(--black);
     text-rendering: optimizeLegibility;
     text-decoration: none;
-    outline: 1px solid #0f0;
-    outline-offset: -1px;
+    /*outline: 1px solid #0f0;
+    outline-offset: -1px;*/
 }
 
-html,
 body {
     height: 100%;
-    margin: 0;
     box-sizing: border-box;
     background-color: var(--black);
 }
 
 section {
+    display: flex;
     height: 100%;
     min-height: 100vh;
     box-sizing: border-box;
@@ -45,12 +44,23 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: inset 0 0 8vw var(--black), inset 0 0 12vw var(--black);
-    filter: brightness(1.35);
+    box-shadow: inset 0 0 64px var(--black), inset 0 0 80px var(--black);
 }
 
 #home {
     background-image: url(./assets/images/backgrounds/home.jpg);
+}
+
+#about {
+    background-image: url(./assets/images/backgrounds/about.jpg);
+}
+
+#interests {
+    background-image: url(./assets/images/backgrounds/interests.jpg);
+}
+
+#projects {
+    background-image: url(./assets/images/backgrounds/projects.jpg);
 }
 
 .content {
@@ -61,7 +71,7 @@ section {
     gap: 16px;
     padding: 32px;
     background-color: var(--content);
-    backdrop-filter: blur(.2vw);
+    backdrop-filter: blur(2px);
     animation: hexagon-open 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
     opacity: 0;
 }
@@ -84,8 +94,8 @@ section {
 }
 
 .pfp {
-    width: 96px;
-    height: 96px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     background-image: url(./assets/images/other/pfp.svg);
     background-size: cover;
@@ -104,12 +114,42 @@ section {
     }
 }
 
+.nameContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    height: 40px;
+}
+
 .name {
     font-family: cocogoose;
-    font-size: 32px;
-    text-align: center;
+    font-size: 40px;
     text-transform: uppercase;
     color: var(--white);
+}
+
+.line {
+    flex: 1;
+    height: 6px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: lineGrow 2s cubic-bezier(.2, .6, .5, 1) forwards 2s;
+}
+
+.line:first-child {
+    transform-origin: right;
+}
+
+.line:last-child {
+    transform-origin: left;
+}
+
+@keyframes lineGrow {
+    to {
+        transform: scaleX(1);
+    }
 }
 
 .homeButtons {
@@ -118,13 +158,14 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 8px;
+    width: 320px;
 }
 
-.homeButton {
+button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 320px;
+    width: 100%;
     height: 48px;
     background-color: var(--button);
     border: none;
@@ -132,34 +173,40 @@ section {
     cursor: pointer;
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
     position: relative;
+    transition: transform 0.1s;
 }
 
-.homeButton__text {
+button:active {
+    transform: scale(0.95);
+}
+
+.button__text {
     font-family: rajdhani;
     text-transform: uppercase;
     font-size: 24px;
+    font-weight: bold;
     color: var(--black);
     letter-spacing: 0px;
     position: relative;
 }
 
-.homeButton__arrow {
+.button__arrow {
     background-image: url(./assets/images/other/arrow.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    right: 24px;
+    right: 30px;
     width: 24px;
     height: 24px;
     transition: .4s;
 }
 
-.homeButton:hover .homeButton__arrow {
-    right: 1.75vw;
+button:hover .button__arrow {
+    right: 22px;
 }
 
-.homeButton::before {
+button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -171,12 +218,136 @@ section {
     z-index: 0;
 }
 
-.homeButton:hover::before {
+button:hover::before {
     left: 0;
+}
+
+.section__name{
+    font-size: 24px;
+    font-family: cocogoose;
+    color: var(--white);
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 992px;
 }
 
 .socials {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.socialIcon {
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+}
+
+.socialIcon:hover {
+    transform: scale(1.1);
+}
+
+.projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: start;
     justify-content: space-between;
+    width: 992px;
+    gap: 16px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 160px;
+    gap: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    --c: var(--button);
+    --b: 2px;
+    --g: 8px;
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%, var(--c) 0;
+    background: conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat, conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
+    transition: .15s, background-position .15s .15s;
+}
+
+.project:hover {
+    --_i: 100%;
+    transition: .15s, background-size .15s .15s;
+}
+
+.project__image {
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#project1 .project__image {
+    background-image: url(./assets/images/projects/dozenvalues.svg);
+}
+
+#project2 .project__image {
+    background-image: url(./assets/images/projects/ideosorter.svg);
+}
+
+#project3 .project__image {
+    background-image: url(./assets/images/projects/rfgen.png);
+}
+
+#project4 .project__image {
+    background-image: url(./assets/images/projects/canchart.png);
+}
+
+#project5 .project__image {
+    background-image: url(./assets/images/projects/uschart.png);
+}
+
+#project6 .project__image {
+    background-image: url(./assets/images/projects/frchart.png);
+}
+
+.project__name {
+    font-family: cocogoose;
+    font-size: 24px;
+    color: var(--white);
+    text-align: center;
+}
+
+.project_description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: rajdhani;
+    font-size: 14px;
+    color: var(--white);
+    text-align: center;
+    height: 36px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .buttons {
+        flex-direction: column;
+        width: 320px;
+    }
+
+    .projectsContainer {
+        width: 320px;
+    }
 }
