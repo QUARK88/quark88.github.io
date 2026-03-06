@@ -43,11 +43,13 @@
                 <img title="Quark on Discord" src="./assets/images/socials/discord.svg" class="socialIcon" onclick="navigator.clipboard.writeText('realquark');confirm('Discord tag copied! (realquark)')">
                 <a target="_blank" href="https://x.com/RenaudBeaulieuQ"><img title="Quark on X" src="./assets/images/socials/x.svg" class="socialIcon"></a>
                 <a target="_blank" href="https://www.reddit.com/user/QK_QUARK88"><img title="Quark on Reddit" src="./assets/images/socials/reddit.svg" class="socialIcon"></a>
+                <a target="_blank" href="https://github.com/QUARK88"><img title="Quark on GitHub" src="./assets/images/socials/github.svg" class="socialIcon"></a>
             </div>
         </div>
     </section>
     <section id="about">
         <div class="content">
+            <div class="section__name">About</div>
             <div class="buttons">
                 <button onclick="show(home)">
                     <div class="button__text">Home</div>
@@ -66,6 +68,24 @@
     </section>
     <section id="interests">
         <div class="content">
+            <div class="section__name">Interests</div>
+            <div class="interestsContainer">
+                <div class="interest">
+                    <div class="interest__image" id="interest1"></div>
+                    <div class="interest__title">Political philosophy</div>
+                    <div class="interest__description">I read on elite theory, cultural evolution and market mechanisms, and study the political implications of cybernetic, libidinal and civilizational philosophy.</div>
+                </div>
+                <div class="interest">
+                    <div class="interest__image" id="interest2"></div>
+                    <div class="interest__title">Computer science</div>
+                    <div class="interest__description">I learn on the workings of computers and their associated devices, in domains such as web design, app programming, data visualization and PC building.</div>
+                </div>
+                <div class="interest">
+                    <div class="interest__image" id="interest3"></div>
+                    <div class="interest__title">Electronic music</div>
+                    <div class="interest__description">I enjoy listening to various genres of electronic music, and primarily feel inspired by darksynth, hardbass, rave, vaporwave and drift phonk.</div>
+                </div>
+            </div>
             <div class="buttons">
                 <button onclick="show(home)">
                     <div class="button__text">Home</div>
@@ -136,6 +156,28 @@
 </body>
 
 <script>
+    const imageUrls = [
+        "./assets/images/backgrounds/home.jpg",
+        "./assets/images/backgrounds/about.jpg",
+        "./assets/images/backgrounds/interests.jpg",
+        "./assets/images/backgrounds/projects.jpg",
+        "./assets/images/interests/ccru.jpg",
+        "./assets/images/interests/nrx.jpg",
+        "./assets/images/interests/fn.jpg",
+        "./assets/images/interests/dony.jpg",
+        "./assets/images/interests/bin.jpg",
+        "./assets/images/interests/board.jpg",
+        "./assets/images/interests/brut.jpg",
+        "./assets/images/interests/gopnik.jpg",
+        "./assets/images/interests/hop.jpg"
+    ]
+    function preloadImage(url) {
+        const img = new Image()
+        img.src = url
+    }
+    imageUrls.forEach(url => {
+        preloadImage(url);
+    })
     home = document.getElementById("home")
     about = document.getElementById("about")
     interests = document.getElementById("interests")
