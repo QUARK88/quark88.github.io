@@ -573,7 +573,7 @@ button:hover::before {
 }
 
 #project3 .project__image {
-    background-image: url(./assets/images/projects/rfgen.png);
+    background-image: url(./assets/images/projects/ideoslopper.png);
 }
 
 #project4 .project__image {
@@ -586,6 +586,18 @@ button:hover::before {
 
 #project6 .project__image {
     background-image: url(./assets/images/projects/frchart.png);
+}
+
+#project7 .project__image {
+    background-image: url(./assets/images/projects/chart.png);
+}
+
+#project8 .project__image {
+    background-image: url(./assets/images/projects/rfgen.png);
+}
+
+#project9 .project__image {
+    background-image: url(./assets/images/projects/vic3gen.png);
 }
 
 .project__name {
